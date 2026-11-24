@@ -12,8 +12,10 @@ class Trainer:
         return np.random.rand(self.X.shape[1], 1)
 
     def epoch(
-        self, w: np.ndarray, learning_rate: np.float32 = 0.0001
-    ) -> tuple[np.float32, np.ndarray]:
+        self,
+        w: np.ndarray,
+        learning_rate: np.float64 = 0.0001,
+    ) -> tuple[np.float64, np.ndarray]:
         lc = LossCalculator(self.y, self.X)
         losses = lc.loss(w)
         delta = lc.loss_gradient(w)

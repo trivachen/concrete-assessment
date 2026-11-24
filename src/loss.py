@@ -8,7 +8,7 @@ class LossCalculator:
     y: np.ndarray
     X: np.ndarray
 
-    def loss(self, w: np.ndarray) -> np.float32:
+    def loss(self, w: np.ndarray) -> np.float64:
         f = compose(
             np.mean,
             lambda x: x**2,
@@ -16,7 +16,7 @@ class LossCalculator:
         )
         return f(self.X @ w)
 
-    def loss_gradient(self, w: np.ndarray) -> np.float32:
+    def loss_gradient(self, w: np.ndarray) -> np.float64:
         f = compose(
             lambda x: x * 2 / self.X.shape[0],
             lambda x: self.X.T @ x,
