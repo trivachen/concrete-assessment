@@ -1,0 +1,18 @@
+* Concrete assessment
+
+** Introduction
+
+This is a repository, in which I am trying to predict the ~Concrete compressive strength~ field of ~Concrete Compressive Strength~ dataset, that it is available [[https://archive.ics.uci.edu/dataset/165/concrete+compressive+strength][here]].
+
+It has no practical meaning, except of showing off my skills.
+
+** Setup
+
+First and foremost, create ~data/~ folder and place there ~Concrete_Data.xls~. Then, you are almost ready to go. Just do the basics:
+
+#+begin_src python
+  python -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+  python main.py
+#+end_src
