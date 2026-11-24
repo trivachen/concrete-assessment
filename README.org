@@ -10,7 +10,7 @@ It has no practical meaning, except of showing off my skills.
 
 First and foremost, create ~data/~ folder and place there ~Concrete_Data.xls~. Then, you are almost ready to go. Just do the basics:
 
-#+begin_src python
+#+begin_src bash
   python -m venv venv
   source venv/bin/activate
   pip install -r requirements.txt
