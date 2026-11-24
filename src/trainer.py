@@ -5,17 +5,16 @@ import numpy as np
 
 @dataclass(frozen=True)
 class Trainer:
-    y: np.array
-    X: np.array
+    y: np.ndarray
+    X: np.ndarray
 
-    def initial_weights(self) -> np.array:
-        return np.random.rand(self.X.shape[0], 1)
+    def initial_weights(self) -> np.ndarray:
+        return np.random.rand(self.X.shape[1], 1)
 
-    def y_tilde(self, w: np.array) -> np.array:
-        return self.X @ w
-
-    def epoch(self, w: np.array) -> tuple[np.float32 | np.array]:
+    def epoch(
+        self, w: np.ndarray, learning_rate: np.float32 = 0.0001
+    ) -> tuple[np.float32, np.ndarray]:
         lc = LossCalculator(self.y, self.X)
         losses = lc.loss(w)
         delta = lc.loss_gradient(w)
-        return losses, w - delta
+        return losses, w - learning_rate * delta
