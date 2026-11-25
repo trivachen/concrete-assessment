@@ -23,4 +23,4 @@ The whole point of this project is to find such ~w~, multiplying by which ~X~ wi
 
 ** State
 
-Right now, there is only one layer in ~w~ variable and, therefore, the prediction is not very precise (but, at least, it kinda works).
+Right now, there is only one layer of ~w~ variable and, therefore, the prediction is not very precise (but, at least, it kinda works).
