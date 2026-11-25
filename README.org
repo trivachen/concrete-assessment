@@ -16,3 +16,11 @@ First and foremost, create ~data/~ folder and place there ~Concrete_Data.xls~. T
   pip install -r requirements.txt
   python main.py
 #+end_src
+
+** Implementation
+
+The whole point of this project is to find such ~w~, multiplying by which ~X~ will give the most close to ~y~ variable result. This is made through adjusting the ~w~ using MSE function.
+
+** State
+
+Right now, there is only one layer in ~w~ variable and, therefore, the prediction is not very precise (but, at least, it kinda works).
